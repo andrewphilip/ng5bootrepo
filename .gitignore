@@ -7,6 +7,6 @@
 *.jar
 *.war
 **/target
-**/bin
-**/dist
+*/bin
+*/dist
 **/node
