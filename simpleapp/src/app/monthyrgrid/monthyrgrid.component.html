@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="modecont">
+		<select #gmode (change)="resetGrid(gridtab,gmode.value)">
+			<option value='M'>Single</option>
+			<option value='R'>Range</option>
+		</select>
+	</div>
+	<div class="gridcont">
+	<table #gridtab>
+		<tr>
+			<th></th>
+			<th *ngFor="let m of mnthNameArr">
+				<button  [attr.id]="'btn' + m">{{m}}</button>
+			</th>
+		</tr>
+		<tr *ngFor="let y of yearArr">
+			<td><button  (click)='selectAllMnthsoftheYear($event, y)' value='0'>{{y}}</button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+1" (click)="processSelection($event,gmode.value)" value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+2" (click)="processSelection($event,gmode.value)" value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+3" (click)="processSelection($event,gmode.value)" value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+4" (click)="processSelection($event,gmode.value)" value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+5" (click)="processSelection($event,gmode.value)" value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+6" (click)="processSelection($event,gmode.value)"  value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+7" (click)="processSelection($event,gmode.value)"  value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+8" (click)="processSelection($event,gmode.value)"  value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+9" (click)="processSelection($event,gmode.value)"  value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+10" (click)="processSelection($event,gmode.value)" value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+11" (click)="processSelection($event,gmode.value)" value='0'></button></td>
+			<td><button monthselect   [attr.id]="'btn'+y+12" (click)="processSelection($event,gmode.value)" value='0'></button></td>
+		</tr>
+	</table>
+	</div>
+</div>

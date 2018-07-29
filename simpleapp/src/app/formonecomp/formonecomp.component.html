@@ -1,0 +1,21 @@
+<br>
+<div id="tmpform">
+	<h4>Template Driven Form:</h4>
+	<form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
+		<div class="form-group">
+			<label for="firstName">First Name:</label> 
+			<input required minlength="3" #firstName="ngModel" name="firstName" id="firstName" type="text" ngModel
+				class="form-control" />
+		</div>
+		<div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+			<div *ngIf="firstName.errors.required">First name is required</div>
+			<div *ngIf="firstName.errors.minlength">First name length should be at least 3 characters</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="comment">Comment:</label>
+			<textarea id="comment" cols="30" rows="5" class="form-control"></textarea>
+		</div>
+		<button class="btn btn-primary">Submit</button>
+	</form>
+</div>

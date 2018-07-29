@@ -1,0 +1,12 @@
+**/.metadata
+**/.recommenders
+**/node_modules
+**/RemoteSystemsTempFiles
+*.class
+*.log
+*.jar
+*.war
+**/target
+**/bin
+**/dist
+**/node

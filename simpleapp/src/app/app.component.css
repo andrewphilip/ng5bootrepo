@@ -1,0 +1,11 @@
+#parentWin, #child1Win {
+	
+	background: #e6e6e6;
+	border:1px solid black;
+	margin:3px 5px;
+	padding:3px 0;
+	text-align:center;
+	width:80%;
+	float:left;
+}
+

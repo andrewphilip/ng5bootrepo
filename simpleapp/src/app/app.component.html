@@ -1,0 +1,16 @@
+<navbar></navbar>
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div id="parentWin">
+	Component Name: <strong>{{cname}}</strong>
+	<br>
+	Received:<strong>{{datarcvd}}</strong>
+</div>
+<div id="child1Win">
+	<childone [pname]='cname' (dataup)="logData($event)" ></childone>
+</div>
+<router-outlet></router-outlet>
